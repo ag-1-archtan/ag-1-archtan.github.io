@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>🤨</title>
+  <title>Loading…</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       background: #0d0d0d;
-      color: #fff;
+      color: #ffffff;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       display: flex;
       align-items: center;
@@ -21,35 +21,49 @@
       padding: 20px;
     }
     .loading {
-      font-size: 1.2rem;
-      opacity: 0.7;
+      font-size: 1.3rem;
+      opacity: 0.8;
     }
     .msg {
       display: none;
-      font-size: 2rem;
-      font-weight: 700;
+      font-size: 2.2rem;
+      font-weight: 800;
     }
     .sub {
       display: none;
-      margin-top: 10px;
+      margin-top: 12px;
       font-size: 1rem;
-      opacity: 0.8;
+      opacity: 0.75;
     }
   </style>
 </head>
 <body>
+
   <div class="box">
-    <div class="loading" id="loading">Checking access…</div>
-    <div class="msg" id="msg">What are you doing here, boy?</div>
-    <div class="sub" id="sub">Ain’t nothing to see 💀</div>
+    <div class="loading" id="loading">Verifying age…</div>
+    <div class="msg" id="msg">Bro really clicked 💀</div>
+    <div class="sub" id="sub">What are you doing here, boy?</div>
   </div>
 
   <script>
+    // Fake verification step
+    setTimeout(() => {
+      document.getElementById("loading").innerText = "Access granted…";
+    }, 1500);
+
+    // Reveal roast
     setTimeout(() => {
       document.getElementById("loading").style.display = "none";
       document.getElementById("msg").style.display = "block";
       document.getElementById("sub").style.display = "block";
-    }, 2500);
+    }, 3000);
+
+    // Auto redirect after roast
+    setTimeout(() => {
+      window.location.href = "https://google.com";
+    }, 7000);
   </script>
+
 </body>
 </html>
+
